@@ -1,0 +1,134 @@
+// MAYBE PUT GRID OF TRAVEL OPTIONS ON THE SUB PAGES
+
+//                 Headers section
+// Flights Page Header
+.flights__header{
+    @extend .sub__headers;
+    background-image: url(/subPage-imgs/flightsHeaderSmall.jpg);
+}
+// Taxi page Header
+.taxi__header{
+    @extend .sub__headers;
+    background-image: url(/subPage-imgs/taxiheadingsmall.jpg);
+}
+// Coach Header
+.coach__header{
+    @extend .sub__headers;
+    background-image: url(/subPage-imgs/CoachheaderSmall.jpg)
+}
+// RideShare Header
+.ride__header{
+    @extend .sub__headers;
+    background-image: url(/subPage-imgs/RideshareheaderSmall.jpg)
+}
+// Parking Header
+.parking__header{
+    @extend .sub__headers;
+    background-image: url(/subPage-imgs/ParkingHeaderSmall.jpg)
+}
+// Shuttle
+.shuttle__header{
+    @extend .sub__headers;
+    background-image: url(/subPage-imgs/ShuttleheaderSmall.jpg);
+}
+
+//                General content styles
+.sub__sections{
+    padding: 5%;
+    width: 100%;
+    height: 35rem; //  might change on screen size
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sub__content--wrap{
+    height: 90%;
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.sub__title{
+    // margin-bottom: auto;
+    width: 100%;
+    background-color: $secondary-color;
+    // height: 25%;
+    h4{
+        font-size: 2rem;
+        font-family: $title-font;
+        color: $white-text;
+    }
+}
+.sub__body{
+    // margin-bottom: auto;
+    padding: 5%;
+    width: 90%;
+    height: 100%;
+    article{
+    text-align: left;
+    }
+}
+
+
+
+//               MEDIA QUERIES
+
+// Headers section (Tablet & above header imgs)
+
+@media (min-width: 600px){
+    // Flights Page Header
+    .flights__header{
+        background-image: url(/subPage-imgs/FlightsheaderLarge.jpg);
+    }
+    // Taxi page Header
+    .taxi__header{
+        background-image: url(/subPage-imgs/taxiheadingLarge.jpg);
+    }
+    // Coach Header
+    .coach__header{
+        background-image: url(/subPage-imgs/CoachheaderLarge.jpg)
+    }
+    // RideShare Header
+    .ride__header{
+        background-image: url(/subPage-imgs/RideshareheaderLarge.jpg)
+    }
+    // Parking Header
+    .parking__header{
+        background-image: url(/subPage-imgs/ParkingHeaderLarge.jpg)
+    }
+    // Shuttle
+    .shuttle__header{
+        background-image: url(/subPage-imgs/ShuttleheaderLarge.jpg);
+    }
+}
+
+// // Desktop 
+
+@media (min-width: 1000px){
+    .flights__header{
+        background-image: url(/subPage-imgs/FlightsheaderLargeDeskTop.jpg);
+    }
+    // Taxi page Header
+    .taxi__header{
+        background-image: url(/subPage-imgs/taxiheadinglargedesktop.jpg);
+    }
+    // Coach Header
+    .coach__header{
+        background-image: url(/subPage-imgs/CoachheaderLargeDesktop.jpg)
+    }
+    // RideShare Header
+    .ride__header{
+        background-image: url(/subPage-imgs/RideshareheaderLargeDesktop.jpg)
+    }
+    // Parking Header
+    .parking__header{
+        background-image: url(/subPage-imgs/ParkingHeaderLargeDesktop.jpg)
+    }
+    // Shuttle
+    .shuttle__header{
+        background-image: url(/subPage-imgs/ShuttleheaderLargeDesktop.jpg);
+    }
+};

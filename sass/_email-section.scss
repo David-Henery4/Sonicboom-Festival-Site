@@ -1,0 +1,82 @@
+#email-break {
+  width: 100vw;
+  height: 20rem;
+  color: $white-text;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  // margin: 4rem 0;
+  img {
+    width: 100%;
+  }
+  .email-container {
+    background-color: $secondary-color;
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 1rem 5%;
+    p {
+      font-weight: 600;
+    }
+  }
+  input {
+    outline: none;
+    background-color: transparent;
+    border: 2px solid $white-text;
+    margin-top: 1rem;
+    padding: 5px 2px;
+    height: 2rem;
+    width: 12rem;
+    color: $white-text;
+  }
+  button {
+    background-color: transparent;
+    border: 2px solid $white-text;
+    padding: 5px 45px;
+    border-radius: 20px;
+    color: $white-text;
+    font-family: $text-font;
+    margin-top: 1rem;
+    font-weight: 600;
+  }
+  button:hover{
+    background-color: $white-text;
+    color: $black-text;
+    cursor: pointer;
+  }
+}
+
+//                  MEDIA QUERIES
+
+// Desktop
+
+@media (min-width: 1000px){
+  #email-break{
+    height: 30rem;
+    p{
+      font-size: 1.2rem;
+    }
+    input{
+      padding: 5px 2px;
+      height: 2.5rem;
+      width: 20rem;
+      font-size: 1.3rem;
+    }
+    button{
+      padding: 12px 65px;
+      border-radius: 30px;
+      font-size: 1.2rem;
+      font-weight: 600;
+    }
+  }
+}
+
+// LARGE DESKTOP
+@media (min-width: 1200px){
+  #email-break{
+    height: 40rem;
+  }
+}

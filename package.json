@@ -1,0 +1,17 @@
+{
+  "name": "sonicboom-festival-site",
+  "version": "2.0.0",
+  "description": "music-festival-site",
+  "default": "index.html",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html --dist-dir ./dist"
+  },
+  "author": "David Henery",
+  "license": "ISC",
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.4.1",
+    "parcel": "^2.4.1",
+    "sass": "^1.50.1"
+  }
+}

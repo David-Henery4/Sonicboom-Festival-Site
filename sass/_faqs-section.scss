@@ -1,0 +1,91 @@
+// Need to add logo
+// ADD ANIMATIONS IN DROPDOWN ICONS!!!
+.faqs-header {
+  @extend .sub__headers;
+  background-image: url(/faqs-imgs/FAQHeaderSmall.jpg);
+}
+
+#faqs__section {
+  padding: 5%;
+  width: 100%;
+  // height: ; (not yet)
+}
+
+.faqs__container {
+  width: 90%;
+  padding: 5% 0;
+  margin: 0 auto;
+  // background-color: $faqs-grey;
+  // border: 5px solid $footer-color;
+}
+
+.faqs__block--wrap {
+  margin-bottom: 4rem;
+  width: 100%;
+  h4 {
+    margin-bottom: 4rem;
+    font-family: $title-font;
+    color: $black-text;
+    font-size: 2rem;
+    color: $white-text;
+  }
+}
+.faq__title--wrap {
+  width: 75%;
+  margin: 0 auto;
+  background-color: $secondary-color;
+}
+
+.faqs__dropdown--wrap {
+  width: 100%;
+}
+
+.faqs__box {
+  width: 100%;
+  padding: 0 5%;
+  height: 3rem;
+  margin-top: 1rem;
+  display: flex;
+  color: $white-text;
+  background-color: $footer-color;
+  // justify-content: center; // s/b
+  align-items: center;
+  transition: 0.4s;
+  p {
+    margin-left: auto;
+  }
+  div {
+    margin-left: auto;
+  }
+}
+.faqs__box:hover {
+  cursor: pointer;
+}
+
+.answer {
+  width: 100%;
+  background-color: $white-text;
+  max-height: 0;
+  transition: max-height 0.2s ease-out;
+  overflow: hidden;
+  transition: 0.4s;
+  padding: 0 5%;
+  h4,
+  p {
+    color: $black-text;
+  }
+}
+.active--answer {
+  padding: 5% 0;
+  max-height: 300px;
+  border: 5px solid $footer-color;
+}
+
+//                      MEDIA QUERIES
+
+// Tablet
+@media (min-width: 750px) {
+  .faqs-header {
+    background-image: url(/faqs-imgs/FAQHeaderBig.jpg);
+  }
+}

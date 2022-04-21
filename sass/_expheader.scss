@@ -1,0 +1,51 @@
+// MAKE LOGO APPEAR ON BIGGER SCREENS! LOGO MISSING!
+.sub__headers {
+  color: $white-text;
+  width: 100%;
+  height: 65vh;
+  background-image: url(/Exp-page-imgs/Exp-background-Mob.jpg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  padding: 5%;
+  .exp--title {
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    h1 {
+      font-family: $title-font;
+      font-size: 4rem;
+    }
+  }
+}
+.desk__logo{
+    display: none;
+  }
+
+// MEDIA QUERIES
+
+// Tablet
+@media(min-width: 600px){
+.sub__headers{
+  background-image: url(/Exp-page-imgs/Exp-background-Desk.jpg);
+  .exp--title{
+      h1{
+        font-size: 5rem;
+      }
+    }
+  }
+}
+
+// Desktop
+// Missing logo on desktop sizes// Sort it!
+// media query extends with the classes aswell!
+@media (min-width: 1000px){
+  .sub__headers{
+    padding: 0 5% 5%;
+  }
+  .desk__logo{
+    display: block;
+  }
+}

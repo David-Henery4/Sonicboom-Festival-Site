@@ -1,0 +1,120 @@
+#exp__content--section {
+  padding: 5%;
+  width: 100%;
+  // height: 100%;
+  // height: 100vh;
+  color: black;
+  h4 {
+    font-family: $title-font;
+  }
+}
+
+.content-box-sizes {
+  width: 100%;
+  height: 75vh;
+  margin: 1.5rem 0;
+  img {
+    height: 40%;
+    width: 100%;
+    object-fit: cover;
+    object-position: 50% 50%;
+  }
+}
+
+.exp__info--text {
+  padding: 5%;
+  height: 60%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  h4 {
+    font-size: 1.75rem;
+  }
+}
+
+.exp__info--1 {
+  @extend .content-box-sizes;
+  color: $white-text;
+  background-color: $primary-color;
+  border: 5px solid $primary-color;
+  #img-1-exp{
+   grid-area: exp1;
+  }
+  .exp-1-text{
+    grid-area: exp1-text;
+  }
+}
+
+.exp__info--2 {
+  @extend .content-box-sizes;
+  border: 5px solid $secondary-color;
+  #img-2-exp {
+    grid-area: exp2;
+  }
+  .exp-2-text {
+    grid-area: exp2-text;
+  }
+}
+
+.exp__info--3 {
+  @extend .content-box-sizes;
+  color: $white-text;
+  background-color: $secondary-color;
+  border: 5px solid $secondary-color;
+  #img-3-exp {
+    grid-area: exp3;
+  }
+  .exp-3-text {
+    grid-area: exp3-text;
+  }
+}
+
+.exp__info--4 {
+  @extend .content-box-sizes;
+  border: 5px solid $primary-color;
+  #img-4-exp {
+    grid-area: exp4;
+  }
+  .exp-4-text {
+    grid-area: exp4-text;
+  }
+}
+
+// MEDIA QUERIES
+
+// Content one img strange sizeing
+
+@media (min-width: 600px) {
+  .content-box-sizes {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 100%;
+    height: 50vh;
+    img {
+      height: 100%;
+      width: 100%;
+    }
+  }
+  // Text box
+  .exp__info--text {
+    height: 100%;
+  }
+  // Content Box-1
+  .exp__info--1{
+    grid-template-areas: "exp1 exp1-text";
+  }
+  // Content Box-2
+  .exp__info--2 {
+    grid-template-areas: "exp2-text exp2";
+  }
+  // Content Box-3
+  .exp__info--3 {
+    grid-template-areas: "exp3 exp3-text";
+  }
+  // Content Box-4
+  .exp__info--4 {
+    grid-template-areas: "exp4-text exp4";
+  }
+}

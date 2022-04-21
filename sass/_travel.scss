@@ -1,0 +1,359 @@
+// Need better image on small
+.travel__header {
+  @extend .sub__headers;
+  background-image: url(/travel-imgs/TravelHeaderbackgroundSmall.jpg);
+  .exp--title {
+    h1 {
+      font-size: 3.25rem;
+    }
+  }
+}
+
+// Travel Section
+
+#travel__section {
+  width: 100%;
+  padding: 5%;
+  height: 100%;
+}
+
+.travel__content {
+  width: 100%;
+  height: 100%;
+  h4 {
+    font-size: 3rem;
+    font-family: $title-font;
+    color: $white-text;
+  }
+}
+
+.travel__titles--wrap {
+  @extend .poster__title--wrap;
+}
+
+.travel__options--grid {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(1, 1fr);
+  grid-auto-rows: 250px;
+  grid-auto-flow: dense;
+  margin-top: 4rem;
+}
+
+// Need to add hover & shade!
+.travel__style {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  div {
+    width: 100%;
+    height: 100%;
+  }
+  div:hover {
+    transition: 2s;
+    transform: scale(1.5);
+  }
+  div:after {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    top: 0;
+    left: 0;
+    display: block;
+    content: "";
+  }
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 50%;
+    position: relative;
+  }
+  h6 {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: $white-text;
+    font-family: $title-font;
+    font-size: 2rem;
+    z-index: 20;
+  }
+}
+
+// Accomodation Section
+
+#accomodation__section {
+  width: 100%;
+  padding: 5%;
+  height: 100%;
+}
+
+.hotel__content {
+  width: 100%;
+  height: 100%;
+  margin-top: 6rem;
+  h4 {
+    font-size: 3rem;
+    font-family: $title-font;
+    color: $white-text;
+  }
+}
+
+// Accomo slide
+
+// Accom visable slides:
+// 3 slides on desk
+// 2 slides on tablet
+// 1 slides on phone
+.accomo__options--grid {
+  height: 40rem;
+  max-width: 100%;
+  margin-top: 2rem;
+  position: relative;
+  // margin: 0 auto;
+  overflow: hidden;
+  // display: grid;
+  // grid-template-columns: repeat(2,);
+}
+
+.accomo__slide {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  transition: transform 1s;
+  // border: 5px solid $primary-color;
+  // display: flex; // Might not need tho
+  // justify-content: center;
+  // align-items: center;
+}
+
+// Accomo dots & button
+
+.accomo__btndots--wrap {
+  width: 100%;
+  height: 100%;
+  // padding: 0 2%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.accomo__btn {
+  // position: absolute;
+  // bottom: -5%;
+  height: 2.5rem;
+  // z-index: 10;
+  position: relative;
+  bottom: 0.75rem;
+  border: none;
+  font-size: 2.5rem;
+  background-color: transparent;
+  cursor: pointer;
+  color: $black-text;
+}
+// .accomo__btn--left{
+
+// }
+// .accomo__btn--right{
+
+// }
+
+.accomo__dots {
+  display: flex;
+}
+.accomo__dots--dot {
+  border: none;
+  background-color: #b9b9b9;
+  opacity: 0.7;
+  height: 1rem;
+  width: 1rem;
+  border-radius: 50%;
+  margin-right: 0.75rem;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+.accomo__dots--dot:last-child {
+  margin: 0;
+}
+.accomo__dot--active {
+  opacity: 1;
+  background-color: #888;
+}
+
+// Accomo slide content
+.accomo__content {
+  width: 95%;
+  height: 95%;
+  padding: 5%;
+  border: 5px solid $primary-color;
+  margin: 0 auto;
+  img {
+    width: 100%;
+    height: 40%;
+    object-fit: cover;
+    object-position: 50% 50%;
+  }
+}
+
+.accomo__text {
+  width: 100%;
+  height: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+// Hotel & BnB card text content styles
+.hotel__card--titles {
+  width: 100%;
+  h6 {
+    font-size: 2rem;
+    font-family: $title-font;
+    margin-top: 1rem;
+  }
+  p {
+    color: $grey-text;
+  }
+}
+.hotel__card--content {
+  width: 100%;
+  padding: 5%;
+  text-align: left;
+  height: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  ul {
+    // position: relative;
+    // left: 9%;
+    padding-left: 18px;
+  }
+}
+
+.accomo__icons {
+  width: 100%;
+  font-size: 2rem;
+  display: flex;
+  justify-content: space-evenly;
+  div:hover {
+    cursor: pointer;
+  }
+}
+
+// BnB SECTION SLIDES
+
+.bnb__options--grid {
+  @extend .accomo__options--grid;
+  position: relative;
+}
+
+.bnb__content {
+  width: 100%;
+  height: 100%;
+  margin-top: 6rem;
+  h4 {
+    font-size: 3rem;
+    font-family: $title-font;
+    color: $white-text;
+  }
+}
+
+.bnb__slide--content {
+  @extend .accomo__content;
+  border: 5px solid $secondary-color;
+}
+
+.bnb__slide {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  transition: transform 1s;
+}
+
+.bnb__btndots--wrap {
+  @extend .accomo__btndots--wrap;
+}
+
+.bnb__btn {
+  @extend .accomo__btn;
+}
+
+.bnb__dots {
+  display: flex;
+}
+
+.bnb__dots--dot {
+  @extend .accomo__dots--dot;
+}
+.bnb__dots--dot:last-child {
+  margin: 0;
+}
+.bnb__dot--active {
+  @extend .accomo__dot--active;
+}
+
+// .bnb__btn--left{
+
+// }
+// .bnb__btn--right{
+
+// }
+//              MEDIA QUERIES
+
+// Accom visable slides:
+// 3 slides on desk
+// 2 slides on tablet
+// 1 slides on phone
+
+// Tablet
+@media (min-width: 650px) {
+  .travel__header {
+    background-image: url(/travel-imgs/TravelHeaderbackgroundBig.jpg);
+    .exp--title {
+      h1 {
+        font-size: 4rem;
+      }
+    }
+  }
+  .travel__options--grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  // .accomo__options--grid{
+  //   overflow: visible;
+  // }
+  .accomo__dots--dot {
+    margin-right: 1.75rem;
+  }
+  .accomo__slide {
+    width: 50%;
+  }
+  .bnb__slide {
+    width: 50%;
+  }
+  // Removing Dot
+  .lastDot {
+    display: none;
+  }
+}
+
+// Desktop
+@media (min-width: 1000px) {
+  .travel__options--grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .accomo__slide {
+    // Same Problem!
+    width: 33.3%;
+  }
+  .bnb__slide {
+    // Same Problem!
+    width: 33.3%;
+  }
+}

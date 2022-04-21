@@ -1,0 +1,93 @@
+//  REMINDER: FIX HOVER STATE ON BUTTONS & REPLACE LOREM WHERE NEEDED
+// and fix btn sizes
+.info__header {
+  @extend .sub__headers;
+  background-image: url(/info-imgs/InformationBackgroundSmall.jpg);
+}
+
+#info__content {
+  width: 100%;
+  padding: 5%;
+}
+
+.info__tabs {
+  max-width: 25rem;
+  // width: 100vw;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+}
+.tabs--btn {
+  background-color: $footer-color;
+  border: none;
+  padding: 5px;
+  width: 5.5rem;
+  color: $white-text;
+  font-family: $title-font;
+}
+.tabs--btn:hover{
+  cursor: pointer;
+}
+
+.info__pages {
+  margin: 2rem auto;
+  max-width: 75%;
+  height: 100%;
+  padding: 5%;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  h4 {
+    // margin-bottom: auto;
+    font-size: 2rem;
+    font-family: $title-font;
+    text-align: center;
+    color: $white-text;
+  }
+  .info__titles--wrap{
+    @extend .poster__title--wrap;
+  }
+
+  article {
+    width: 100%;
+    margin-top: 4rem;
+    // margin-bottom: auto;
+  }
+}
+
+// .terms__content{
+//   height: 100%;
+//   article{
+//     margin-top: 4rem;
+//   }
+// }
+
+.active__info--btn {
+  background-color: $primary-color;
+}
+
+.active__info--content {
+  display: flex;
+}
+
+// Tablet
+@media (min-width: 750px) {
+  .info__header {
+    background-image: url(/info-imgs/InformationBackgroundBig.jpg);
+  }
+  .info__pages {
+    h4 {
+      font-size: 3.5rem;
+    }
+  }
+  .info__tabs {
+    max-width: 75%;
+  }
+  .tabs--btn {
+    width: 10rem;
+    padding: 10px;
+    font-size: 1.25rem;
+  }
+}

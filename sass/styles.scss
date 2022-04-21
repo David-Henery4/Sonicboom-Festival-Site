@@ -1,0 +1,36 @@
+// Remember compress main css file!
+// try again with the color highlight extension!
+// maybe change black text to grey? 
+@import "style-variables"; // needs to be top
+@import "exp-content";
+@import "expslide-section";
+@import "expheader";
+@import "sub-styles";
+@import "travel";
+@import "tickets";
+@import "info";
+@import "faqs-section";
+@import "lineheader";
+@import "lineups-section";
+@import "footers";
+@import "recap";
+@import "email-section";
+@import "showcase-section";
+@import "header";
+@import "nav";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+// Blank for Now
+body {
+  // width: 100%;
+  // height: 100vh;
+  text-align: center;
+  font-family: $text-font;
+  overflow-x: hidden;
+}
+
+

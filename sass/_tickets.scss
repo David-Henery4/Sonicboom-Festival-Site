@@ -1,0 +1,146 @@
+.tickets__header {
+  @extend .sub__headers;
+  background-image: url(/ticket-imgs/TicketsBackgroundSmall.jpg);
+}
+
+#tickets__section {
+  height: 100%;
+  width: 100%;
+  padding: 5%;
+}
+
+.ticket__options--wrap {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  gap: 40px;
+  grid-template-areas:
+    "tOne"
+    "tTwo"
+    "tThree"
+    "tFour";
+  // grid-template-rows: 300px;
+}
+
+.ticket__options {
+  width: 100%;
+  height: 70vh;
+  padding: 2% 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border: 5px solid $footer-color;
+}
+
+.ticket__options--titles{
+  width: 100%;
+  height: 20%;
+  h4 {
+    font-family: $title-font;
+    font-size: 2rem;
+  }
+  h4:last-child{
+    font-size: 1.7rem
+  }
+}
+.ticket__options--body{
+  text-align: left;
+  width: 100%;
+  height: 55%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  font-size: 1.1rem;
+  p{
+    max-width: 95%; // might see
+  }
+  ul{
+    padding-left: 20px;
+  }
+}
+
+.ticket__btn--wrap{
+  width: 100%;
+  height: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  button {
+    padding: 20px 40px;
+    border-radius: 40px;
+    background-color: $footer-color;
+    border: none;
+    color: $white-text;
+    font-family: $title-font;
+    font-size: 1.5rem;
+    // height: 100%;
+  }
+  button:hover{
+    cursor: pointer;
+    background-color: transparent;
+    color: $black-text;
+    border: 5px solid $footer-color;
+  }
+}
+
+.option--1 {
+  grid-area: tOne;
+}
+
+.option--2 {
+  grid-area: tTwo;
+  border-color: $primary-color;
+  button {
+    background-color: $primary-color;
+  }
+  button:hover{
+    border: 5px solid $primary-color;
+  }
+}
+
+.option--3 {
+  grid-area: tThree;
+}
+
+.option--4 {
+  grid-area: tFour;
+  border-color: $primary-color;
+  button {
+    background-color: $primary-color;
+  }
+  button:hover{
+    border: 5px solid $primary-color;
+  }
+}
+
+//                media queries
+// Tablet
+@media (min-width: 750px) {
+  .tickets__header {
+    background-image: url(/ticket-imgs/TicketsBackgroundBigTwo.jpg);
+  }
+  .ticket__options--titles{
+    h4 {
+      font-family: $title-font;
+      font-size: 2.5rem;
+    }
+    h4:last-child{
+      font-size: 2rem
+    }
+  }
+  .ticket__options--wrap{
+    grid-template-areas: 
+    "tOne tOne tTwo tTwo"
+    "tThree tThree tFour tFour";
+  }
+}
+
+
+
+// Desktop
+@media (min-width: 900px){
+  .ticket__options--body{
+    font-size: 1.2rem;
+  }
+}

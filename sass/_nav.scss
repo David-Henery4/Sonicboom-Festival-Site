@@ -1,0 +1,140 @@
+// nav
+// Use intersection API
+// desktop nav: REMOVE ON BIGGER SCREENS
+.desk--nav {
+  display: none;
+}
+#desk--logo {
+  display: none;
+}
+
+// Mob nav: Logo & burger
+.mob--nav {
+  // might have to change to id
+  width: 90vw;
+  height: 10vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  // margin: 0 auto;
+  img {
+    height: 4.25rem;
+  }
+}
+// burger // Might have to re-do
+.burger__container {
+  cursor: pointer;
+  padding: 0 0.9rem;
+}
+.line--1,
+.line--2,
+.line--3 {
+  width: 40px;
+  height: 4px;
+  background-color: white;
+  margin: 6px 0;
+  border-radius: 5px;
+  transition: 0.4s;
+}
+// Animation Classes
+.ani {
+  .line--1 {
+    transform: rotate(-45deg) translate(-6px, 8px);
+  }
+}
+.ani {
+  .line--2 {
+    opacity: 0;
+  }
+}
+.ani {
+  .line--3 {
+    transform: rotate(45deg) translate(-6px, -8px);
+  }
+}
+//
+
+// SLIDE IN NAV
+
+.slide__nav {
+  // opacity: 0; // temp
+  height: 100%;
+  width: 0; // fade in by changing width!
+  position: fixed;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  background-color: $footer-color;
+  // background-color: rgba(24, 24, 24, 1);
+  z-index: 5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s;
+  li {
+    list-style-type: none;
+    margin: 4rem;
+    a {
+      text-decoration: none;
+      color: $white-text;
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
+  }
+}
+.exit-icon {
+  position: absolute;
+  right: 0.75em;
+  top: 0.75em;
+  font-size: 2em;
+  // z-index: 200;
+}
+.exit-icon:hover{
+  cursor: pointer;
+}
+
+//                     MEDIA QUERIES
+
+// Desktop
+
+@media (min-width: 1000px) {
+  .mob--nav {
+    display: none;
+  }
+  #desk--logo {
+    display: block;
+  }
+  .desk--nav {
+    // position: absolute;
+    // top: 0;
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // position: fixed; // might use
+    // z-index: 1000;
+  }
+  .desk--nav-wrap {
+    width: 75%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $flair-color;
+    ul {
+      width: 100%;
+      list-style-type: none;
+      display: flex;
+      justify-content: space-evenly;
+      // align-items: center;
+      a {
+        text-decoration: none;
+        color: $white-text;
+      }
+    }
+  }
+  .place__date {
+    margin: 2rem 0;
+  }
+}

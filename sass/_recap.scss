@@ -1,0 +1,107 @@
+#recap__section {
+  width: 100%;
+  height: 100%;
+  padding: 5%;
+  h4 {
+    margin-bottom: 2rem;
+    font-size: 4rem;
+    font-family: $title-font;
+    color: $white-text
+  }
+}
+.recap__title--wrap{
+  @extend .poster__title--wrap;
+}
+
+// Whole Gallery
+.recap__container {
+  width: 100%;
+  height: 90%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: 200px 300px;
+  grid-auto-flow: dense;
+  gap: 10px;
+}
+
+.gallery-container {
+  height: 100%;
+  width: 100%;
+  .gallery-item {
+    height: 100%;
+    width: 100%;
+    .image {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      img {
+        border: 5px solid $primary-color;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: 50% 50%;
+        border-radius: 20px;
+      }
+    }
+  }
+}
+
+// Grid Utillity classes (span)
+
+// height span
+.h-1 {
+  grid-row: span 1;
+}
+.h-2 {
+  grid-row: span 2;
+}
+.h-3 {
+  grid-row: span 3;
+}
+.h-4 {
+  grid-row: span 4;
+}
+.h-5 {
+  grid-row: span 5;
+}
+.h-6 {
+  grid-row: span 6;
+}
+
+// width span
+.w-1 {
+  grid-column: span 1;
+}
+.w-2 {
+  grid-column: span 2;
+}
+.w-3 {
+  grid-column: span 3;
+}
+.w-4 {
+  grid-column: span 4;
+}
+.w-5 {
+  grid-column: span 5;
+}
+.w-6 {
+  grid-column: span 6;
+}
+
+//                MEDIA QUERIES
+
+// Desktop
+
+@media (min-width: 1000px) {
+  #recap__section {
+    h4 {
+      font-size: 6rem;
+    }
+  }
+  .recap__container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .img8-dt-w {
+    grid-column: span 2;
+  }
+}

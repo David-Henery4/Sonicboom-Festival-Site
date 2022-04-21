@@ -1,0 +1,10 @@
+.line-header {
+  @extend .sub__headers;
+  background-image: url(/lineup-imgs/Line-up-backG-small.jpg);
+}
+
+@media (min-width: 950px){
+  .line-header{
+    background-image: url(/lineup-imgs/Line-up-backG-big.jpg);
+  }
+}
