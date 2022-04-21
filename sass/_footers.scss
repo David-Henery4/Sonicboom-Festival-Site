@@ -50,6 +50,8 @@
 #foot-logo {
   height: 8rem;
   grid-area: logo;
+  max-width: 200px;
+  margin: 0 auto;
 }
 
 // MEDIA QUERIES
@@ -130,5 +132,6 @@
     height: 18rem;
     grid-column: col-start 9 / span 2;
     grid-row: 4 / span 1;
+    max-width: none;
   }
 } ;
