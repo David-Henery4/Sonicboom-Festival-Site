@@ -1,4 +1,4 @@
-import "core-js/stable";
+
 // Elements
 const burger = document.querySelector(".burger__container");
 const slideNav = document.querySelector(".slide__nav");
